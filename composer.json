@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "in-chetan-thumar\\laravel-auth\\LaravelAuthServiceProvider"
+                "InChetanThumar\\LaravelAuth\\LaravelAuthServiceProvider"
             ]
         }
     }
