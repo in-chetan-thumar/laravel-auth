@@ -1,0 +1,27 @@
+{
+    "name": "in-chetan-thumar/laravel-auth",
+    "description": "Laravel Custom Auth",
+    "type": "composer-plugin",
+    "require": {
+        "laravelcollective/html": "^5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hardeep Pandya",
+            "email": "hardeep.pandya@tiez.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "InChetanThumar\\LaravelAuth\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "in-chetan-thumar\\laravel-auth\\LaravelAuthServiceProvider"
+            ]
+        }
+    }
+}
