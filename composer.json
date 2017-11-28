@@ -2,9 +2,7 @@
     "name": "in-chetan-thumar/laravel-auth",
     "description": "Laravel Custom Auth",
     "type": "library",
-    "require": {
-        "laravelcollective/html": "^5.5"
-    },
+    "require": {},
     "license": "MIT",
     "authors": [
         {
