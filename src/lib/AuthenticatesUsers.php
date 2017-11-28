@@ -2,10 +2,10 @@
 
 namespace InChetanThumar\LaravelAuth\lib;
 
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
 trait AuthenticatesUsers {
     
-    public function login()
-    {
-        dd('hello world');
-    }
+    use AuthenticatesUsers;
+    
 }
