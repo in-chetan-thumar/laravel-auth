@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('laravel-auth::layouts.app')
 
 @section('content')
 <div class="container">
@@ -75,3 +75,9 @@
     </div>
 </div>
 @endsection
+
+@push('include_js')
+<script src="{{ assets('vendor/laravel-auth/js/jquery_3_2_1.min.js') }}"></script>
+<script src="{{ assets('vendor/laravel-auth/js/crypto-js.min.js') }}"></script>
+<script src="{{ assets('vendor/laravel-auth/js/laravel-auth-register.js') }}"></script>
+@endpush

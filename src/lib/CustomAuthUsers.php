@@ -19,4 +19,9 @@ trait CustomAuthUsers {
     {
         return $request->only($this->username(), 'password', '_token');
     }
+
+    public function showLoginForm()
+    {
+        return view('laravel-auth::auth.login');
+    }
 }
