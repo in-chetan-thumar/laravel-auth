@@ -3,6 +3,7 @@
 namespace InChetanThumar\LaravelAuth;
 
 use Illuminate\Support\ServiceProvider;
+use InChetanThumar\LaravelAuth\auth\CustomUserProvider;
 
 class LaravelAuthServiceProvider extends ServiceProvider {
     

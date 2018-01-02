@@ -8,7 +8,7 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('register') }}" id="login-frm">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -77,7 +77,7 @@
 @endsection
 
 @push('include_js')
-<script src="{{ assets('vendor/laravel-auth/js/jquery_3_2_1.min.js') }}"></script>
-<script src="{{ assets('vendor/laravel-auth/js/crypto-js.min.js') }}"></script>
-<script src="{{ assets('vendor/laravel-auth/js/laravel-auth-register.js') }}"></script>
+<script src="{{ asset('vendor/laravel-auth/js/jquery_3_2_1.min.js') }}"></script>
+<script src="{{ asset('vendor/laravel-auth/js/crypto-js.min.js') }}"></script>
+<script src="{{ asset('vendor/laravel-auth/js/laravel-auth-register.js') }}"></script>
 @endpush
