@@ -3,9 +3,8 @@
 namespace InChetanThumar\LaravelAuth\lib;
 
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Request;
 
-trait CustomRegistersUsers {
+trait LaravelAuthRegistersUsers {
     
     use RegistersUsers;
 

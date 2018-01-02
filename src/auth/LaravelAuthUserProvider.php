@@ -2,10 +2,11 @@
 
 namespace InChetanThumar\LaravelAuth\auth;
 
+use Illuminate\Support\Str;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Contracts\Auth\Authenticatable as UserContract;
 
-class CustomUserProvider extends EloquentUserProvider {
+class LaravelAuthUserProvider extends EloquentUserProvider {
 
     /**
      * Retrieve a user by the given credentials.
@@ -30,13 +31,7 @@ class CustomUserProvider extends EloquentUserProvider {
             }
         }
 
-        // customize to add role and profile to remain in session for user authenticated..
-        if ($user_authenticated = $query->first())
-        {
-            return $query->first();
-        }
-
-        return FALSE;
+        return $query->first();
     }
 
     /**

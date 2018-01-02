@@ -3,7 +3,7 @@
 namespace InChetanThumar\LaravelAuth;
 
 use Illuminate\Support\ServiceProvider;
-use InChetanThumar\LaravelAuth\auth\CustomUserProvider;
+use InChetanThumar\LaravelAuth\auth\LaravelAuthUserProvider;
 
 class LaravelAuthServiceProvider extends ServiceProvider {
     
@@ -15,8 +15,8 @@ class LaravelAuthServiceProvider extends ServiceProvider {
         $this->loadViewsFrom(__DIR__.'/views', 'laravel-auth');
 
         // Custom service user provider to override default provider
-        \Auth::provider('custom', function($app, array $config) {
-            return new CustomUserProvider($app['hash'], $config['model']);
+        \Auth::provider('laravel-auth-user-provider', function($app, array $config) {
+            return new LaravelAuthUserProvider($app['hash'], $config['model']);
         });
 
         //public configuration file
