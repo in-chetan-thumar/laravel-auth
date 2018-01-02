@@ -6,10 +6,13 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelAuthServiceProvider extends ServiceProvider {
     
-    protected $defer = true;
+    protected $defer = false;
     
     public function boot()
     {
+        //load view location
+        $this->loadViewsFrom(__DIR__.'/views', 'laravel-auth');
+
         // Custom service user provider to override default provider
         \Auth::provider('custom', function($app, array $config) {
             return new CustomUserProvider($app['hash'], $config['model']);
@@ -24,6 +27,12 @@ class LaravelAuthServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__.'/public/' => public_path('vendor/laravel-auth/'),
         ], 'public');
+
+        //publish views
+        $this->publishes([
+            __DIR__.'/views' => resource_path('views/vendor/laravel-auth'),
+        ]);
+
     }
     
     public function register()
