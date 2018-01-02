@@ -5,7 +5,7 @@ namespace InChetanThumar\LaravelAuth\lib;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 
-trait CustomAuthUsers {
+trait CustomRegistersUsers {
     
     use RegistersUsers;
 
